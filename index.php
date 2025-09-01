@@ -2,6 +2,13 @@
 <html lang="en">
 
 <head>
+    <?php
+    session_start();
+    if (!isset($_SESSION["user"])) {
+        header("Location: login.php");
+        exit;
+    }
+    ?>
     <meta charset="UTF-8">
     <title>Links | Online</title>
     <!-- Add Google Fonts Inter -->
@@ -141,7 +148,7 @@
             Online
         </span>
         <span class="topbar-title">Links Page</span>
-        <span class="topbar-user">
+        <span class="topbar-user" style="cursor:pointer;" onclick="window.location.href='logout.php'">
             Isaac Clifton
             <img class="user-img" src="favicon.svg" alt="User Image">
         </span>

@@ -3,6 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <?php
+    session_start();
+    if (!isset($_SESSION["user"])) {
+        header("Location: login.php");
+        exit;
+    }
+    ?>
     <title>Redirecting...</title>
     <script>
         // Set your link here

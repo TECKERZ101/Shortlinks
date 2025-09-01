@@ -3,6 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
+    <?php
+    session_start();
+    if (!isset($_SESSION["user"])) {
+        header("Location: login.php");
+        exit;
+    }
+    ?>
     <title>Dead End</title>
     <meta http-equiv="refresh" content="3; url=../" />
     <style>
