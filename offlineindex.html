@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Links | Offline</title>
+    <!-- Add Google Fonts Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="redfavicon.svg">
+    <style>
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+            background: #16171a;
+            color: #e3e6ed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .topbar {
+            width: 100vw;
+            min-width: 320px;
+            background: #23263a;
+            color: #f5f6fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 2em;
+            height: 64px;
+            box-sizing: border-box;
+            box-shadow: 0 2px 12px rgba(30, 34, 54, 0.22);
+            position: relative;
+        }
+
+        .topbar-title {
+            font-size: 1.6em;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #f5f6fa;
+            text-shadow: 0 2px 8px rgba(30, 34, 54, 0.18);
+        }
+
+        .topbar-user {
+            position: absolute;
+            right: 2em;
+            display: flex;
+            align-items: center;
+            gap: 0.75em;
+            color: #bfc8e6;
+            font-weight: 500;
+        }
+
+        .topbar-status {
+            position: absolute;
+            left: 2em;
+            display: flex;
+            align-items: center;
+            gap: 0.5em;
+            font-weight: 500;
+            color: #bfc8e6;
+            background: rgba(214, 59, 59, 0.08);
+            border: 2px solid #d63b3b;
+            border-radius: 999px;
+            padding: 0.25em 1em 0.25em 0.7em;
+            box-shadow: 0 0 8px #d63b3b22;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #d63b3b;
+            box-shadow: 0 0 8px #d63b3b88;
+            border: 2px solid #23263a;
+            display: inline-block;
+        }
+
+        .user-img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #444;
+            object-fit: cover;
+            border: 2px solid #353a4d;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 2em 0 0 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1em;
+            justify-content: center;
+            width: 100%;
+            max-width: 900px;
+        }
+
+        li {
+            margin: 0;
+            flex: 1 1 180px;
+            max-width: 220px;
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            padding: 0.75em 1.2em;
+            font-size: 1em;
+            cursor: pointer;
+            background-color: #23263a;
+            color: #e3e6ed;
+            border: none;
+            border-radius: 8px;
+            transition: background 0.2s, box-shadow 0.2s;
+            width: 100%;
+            min-width: 120px;
+            box-sizing: border-box;
+            box-shadow: 0 2px 8px rgba(30, 34, 54, 0.18);
+            font-family: 'Inter', Arial, sans-serif;
+            font-weight: 600;
+        }
+
+        button.red-tint {
+            background-color: #3a2323;
+            color: #ffd6d6;
+            box-shadow: 0 2px 8px rgba(214, 59, 59, 0.18);
+        }
+
+        button.red-tint:hover {
+            background-color: #d63b3b;
+            color: #fff;
+            box-shadow: 0 4px 16px rgba(214, 59, 59, 0.28);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="topbar">
+        <span class="topbar-status">
+            <span class="status-dot"></span>
+            Offline
+        </span>
+        <span class="topbar-title">Links Page</span>
+        <span class="topbar-user">
+            Isaac Clifton
+            <img class="user-img" src="favicon.svg" alt="User Image">
+        </span>
+    </div>
+    <ul id="linksList">
+        <li>
+            <button onclick="window.open('links/shutdown.html')">Shutdown</button>
+        </li>
+        <li>
+            <button class="red-tint" onclick="window.open('https://www.github.com', '_blank')">GitHub</button>
+        </li>
+        <li>
+            <button class="red-tint" onclick="window.open('https://www.stackoverflow.com', '_blank')">Stack Overflow
+            </button>
+        </li>
+        <!-- Add more links here as needed -->
+    </ul>
+</body>
+
+</html>
